@@ -67,12 +67,33 @@ It is designed to simplify your development environment while giving you more co
     > Make sure you have `direnv` installed and enabled.  
     > If you're new to `nix-direnv`, check out this great article:  
     > [How to Learn Nix – nix-direnv](https://ianthehenry.com/posts/how-to-learn-nix/nix-direnv/)
+ 6. **Initialize a new Flutter project (if needed)**:
+
+     Inside your development shell, you can run:
+
+     ```bash
+      flutter create .
+     ```
+
+This sets up a standard Flutter app in the current directory.
     
-6. **Open the project in VSCode or your preferred editor.**
+7. **Open the project in VSCode or your preferred editor.**
    ```bash
    code .
    ```
     
+
+
+---
+
+## 📂 Git Ignore Recommendation
+
+To avoid committing local environment files, add the following to your `.gitignore`:
+
+```
+/.direnv/
+/**/IGNORE/
+```
 
 
 ---
