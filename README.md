@@ -82,7 +82,20 @@ This sets up a standard Flutter app in the current directory.
    code .
    ```
     
+---
 
+## 💡 Tip: Free Up RAM After Emulator Use
+
+If you notice that even after closing the emulator your system RAM is still heavily used —  
+and `htop` shows that `openjdk17` or Gradle processes are still running —  
+you can free up memory by stopping the lingering Gradle daemons:
+
+
+```bash
+pkill -f 'org.gradle.launcher.daemon.bootstrap.GradleDaemon'
+```
+
+This is especially useful after emulator use, where Gradle daemons may keep consuming resources in the background.
 
 ---
 
