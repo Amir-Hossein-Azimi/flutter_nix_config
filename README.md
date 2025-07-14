@@ -36,25 +36,44 @@ It is designed to simplify your development environment while giving you more co
 
 1. **Create a new project using this template**:
 
-  ```bash
-   nix flake new my_flutter_app -t github:Amir-Hossein-Azimi/flutter_nix_config
-  ```
-
-2. **Navigate to your project and enable the environment**:
-
    ```bash
-   cd my_flutter_app
-   direnv allow
+   nix flake new my_flutter_app -t github:Amir-Hossein-Azimi/flutter_nix_config
    ```
 
-   > Make sure you have `direnv` installed and enabled.
-   > If you're new to `nix-direnv`, check out this great article:
-   > [How to Learn Nix – nix-direnv](https://ianthehenry.com/posts/how-to-learn-nix/nix-direnv/)
-
-3. **Open the project in VSCode or your preferred editor.**
-  ```bash
-    code .
+2. **Navigate to your project folder**:
+    
+    ```bash
+    cd my_flutter_app
+    ```
+    
+3. **Build the development shell**:
+    
+    ```bash
+    nix build .#devShells.x86_64-linux.default
+    ```
+    
+4. **Enter the development environment**:
+    
+    ```bash
+    nix develop .
+    ```
+    
+5. **Allow the environment with direnv** (optional but recommended):
+    
+    ```bash
+    direnv allow
+    ```
+    
+    > Make sure you have `direnv` installed and enabled.  
+    > If you're new to `nix-direnv`, check out this great article:  
+    > [How to Learn Nix – nix-direnv](https://ianthehenry.com/posts/how-to-learn-nix/nix-direnv/)
+    
+6. **Open the project in VSCode or your preferred editor.**
+   ```bash
+   code .
    ```
+    
+
 
 ---
 
