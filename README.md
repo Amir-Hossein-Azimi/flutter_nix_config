@@ -99,6 +99,28 @@ This is especially useful after emulator use, where Gradle daemons may keep cons
 
 ---
 
+## 🧩 Troubleshooting
+
+### 🛠️ Gradle Can't Download or Fails to Resolve Dependencies?
+
+If Gradle fails to download dependencies (e.g., Android Gradle Plugin), try adjusting the plugin version in your `settings.gradle.kts`.  
+In one case, the following change fixed the issue:
+
+**Before:**
+```kotlin
+id("com.android.application") version "8.7.3" apply false
+```
+
+**After:**
+```kotlin
+`id("com.android.application") version "8.4.1" apply false`
+```
+
+After switching to version `8.4.1`, the download completed successfully.
+
+
+---
+
 ## 📂 Git Ignore Recommendation
 
 To avoid committing local environment files, add the following to your `.gitignore`:
