@@ -27,9 +27,12 @@
       pkgs.flutter
       pkgs.jdk17
       pkgs.chromium
-
+      pkgs.killall
     ];
 
+    shellHook = ''
+      trap "pkill -f 'org.gradle.launcher.daemon.bootstrap.GradleDaemon' || true" EXIT
+    '';
 
     ANDROID_SDK_ROOT = "/home/amir/FROMOLDPC/Project/AndroidStudioSdk/sdk";
     ANDROID_HOME = "/home/amir/FROMOLDPC/Project/AndroidStudioSdk/sdk";
