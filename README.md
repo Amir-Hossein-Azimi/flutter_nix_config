@@ -128,6 +128,17 @@ To avoid committing local environment files, add the following to your `.gitigno
 ```
 /.direnv/
 /**/IGNORE/
+
+# Keystore file
+*.jks
+
+# File containing Keystore properties
+key.properties
+
+# Nix/direnv generated files
+/result
+.direnv/
+
 ```
 
 
