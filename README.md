@@ -46,7 +46,7 @@ It is designed to simplify your development environment while giving you more co
     cd my_flutter_app
     ```
     
-3. **Build the development shell**:
+3. **Build the development shell (if you have garbage collector use this commend otherwise go to no4) **:
     
     ```bash
     nix build .#devShells.x86_64-linux.default
